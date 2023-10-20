@@ -10,6 +10,34 @@ header {
 	grid-area: header;
 }
 
+nav {
+	grid-area: nav;
+	background-color: #333;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul:hover {
+}
+
+nav ul li {
+	list-style: none;
+}
+
+nav ul li a {
+	display: none;
+}
+
+nav li a {
+	color: white;
+}
+li a:hover {
+	background-color: #111;
+}
+
 main {
 	grid-area: main;
 	display: grid;
@@ -19,31 +47,4 @@ main {
 
 footer {
 	grid-area: footer;
-}
-
-nav {
-	grid-area: nav;
-	background-color: #333;
-}
-
-nav > ul {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-nav li {
-	list-style-type: none;
-	text-align: center;
-	display: grid;
-	align-items: stretch;
-}
-
-nav li a {
-	color: white;
-}
-li a:hover {
-	background-color: #111;
 }
