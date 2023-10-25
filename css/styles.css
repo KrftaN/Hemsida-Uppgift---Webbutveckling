@@ -10,14 +10,13 @@ header {
 	grid-area: header;
 	display: grid;
 	background-color: #e76f51;
-	grid-template-columns: 1fr 2fr;
+	grid-template-columns: 1fr 3fr;
 	grid-template-rows: 2fr;
 	color: #e9c46a;
 }
 
 header h1 {
 	padding-left: 15%;
-	width: 50%;
 }
 
 nav {
@@ -25,11 +24,9 @@ nav {
 }
 
 nav ul {
-	text-align: left;
-}
-
-nav ul:hover {
-	color: white;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-top: 3px;
 }
 
 nav ul li {
@@ -37,14 +34,41 @@ nav ul li {
 }
 
 nav ul li a {
-	display: none;
+	display: block;
+	font-size: 22px;
+	margin-top: 20px;
+	margin-right: 120px;
+	text-decoration: none;
+	color: #e9c46a;
+	text-align: center;
 }
 
-nav li a {
-	color: white;
+.dropDown {
+	display: none;
+	position: absolute;
+	background-color: #3c6255;
+	border-radius: 0px 0px 7px 7px;
 }
-li a:hover {
-	background-color: #111;
+
+nav ul li:hover .dropDown {
+	display: block;
+}
+
+.dropDown li {
+	width: 120px;
+	text-align: center;
+}
+
+.dropDown li:nth-child(1) {
+	margin-top: 6px;
+}
+
+.dropDown li:nth-last-of-type(1) {
+	margin-bottom: 6px;
+}
+
+.dropDown li a:hover {
+	color: #264653;
 }
 
 main {
