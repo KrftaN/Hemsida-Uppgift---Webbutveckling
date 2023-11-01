@@ -1,163 +1,185 @@
-/* Stilmall för .wrapper-elementet som omsluter hela sidans innehåll */
+/* Stilar för .wrapper */
 .wrapper {
-	width: 100%; /* Bredden sätts till 100% av förälderelementet */
-	margin: auto; /* Centrerar elementet horisontellt */
-	display: grid; /* Använder CSS Grid för layout */
-	height: 100%; /* Höjden sätts till 100% av förälderelementet */
-	grid-template-rows: 80px 1fr auto; /* Definierar rader för layouten */
-	grid-template-areas: "header" "main" "footer"; /* Definierar områden för layouten */
+	width: 100%; /* Sätter bredden till 100% av förälderelementet. */
+	margin: auto; /* Centrerar elementet horisontellt. */
+	display: grid; /* Använder CSS Grid för layout. */
+	height: 100%; /* Sätter höjden till 100% av förälderelementet. */
+	grid-template-rows: 80px 1fr auto; /* Delar upp rader i grid, topp 80px, mellanfrånrum och botten auto. */
+	grid-template-areas: "header" "main" "footer"; /* Definierar områden i grid. */
 }
 
-/* Stilmall för header-elementet */
+/* Stilar för header */
 header {
-	grid-area: header; /* Placerar header i det angivna området i .wrapper */
-	display: grid; /* Använder CSS Grid för layout */
-	background-color: #f77f00; /* Bakgrundsfärg sätts till orange */
-	grid-template-columns: 1fr 3fr; /* Definierar kolumner för layouten */
-	grid-template-rows: 2fr; /* Definierar rader för layouten */
+	grid-area: header; /* Placerar elementet i grid-området "header". */
+	display: grid; /* Använder CSS Grid för innehållet i header. */
+	background-color: #f77f00; /* Anger bakgrundsfärg. */
+	grid-template-columns: 1fr 3fr; /* Delar upp kolumner i grid. */
+	grid-template-rows: 2fr; /* Delar upp rader i grid. */
 }
 
+/* Stilar för länkar i header */
 header > a {
-	text-decoration: none; /* Tar bort understrykning från länkar */
-	color: #eae2b7; /* Textfärg sätts till ljusgul */
+	text-decoration: none; /* Tar bort understrykning från länkar. */
+	color: #eae2b7; /* Anger textfärg. */
 }
 
+/* Stilar för h1 i header */
 header h1 {
-	padding-left: 15%; /* Vänstermarginal sätts till 15% */
+	padding-left: 15%; /* Lägger till vänstermarginal. */
 }
 
-/* Stilmall för nav-elementet */
+/* Stilar för navigationsmenyn */
 nav {
-	display: grid; /* Använder CSS Grid för layout */
+	display: grid; /* Använder CSS Grid för layout av navigationsmenyn. */
 }
 
+/* Stilar för ul-element i navigationsmenyn */
 nav ul {
-	display: grid; /* Använder CSS Grid för layout */
-	grid-template-columns: 1fr 1fr; /* Definierar kolumner för layouten */
-	margin-top: 3px; /* Översta marginal sätts till 3px */
+	display: grid; /* Använder CSS Grid för layout av listelementen. */
+	grid-template-columns: 1fr 1fr; /* Delar upp kolumner i grid. */
+	margin-top: 3px; /* Anger övre marginal. */
 }
 
+/* Stilar för listelement i navigationsmenyn */
 nav ul li {
-	list-style-type: none; /* Tar bort punktlistmarkering från listelement */
+	list-style-type: none; /* Tar bort punktlistmarkering. */
 }
 
+/* Stilar för länkar i listelement i navigationsmenyn */
 nav ul li a {
-	display: block; /* Gör länkarna till blockelement */
-	font-size: 22px; /* Ange textstorlek */
-	margin-top: 20px; /* Översta marginal sätts till 20px */
-	margin-right: 120px; /* Högermarginal sätts till 120px */
-	text-decoration: none; /* Tar bort understrykning från länkar */
-	color: #eae2b7; /* Textfärg sätts till ljusgul */
-	text-align: center; /* Centrerar texten horisontellt */
+	display: block; /* Gör länkarna blockelement för bättre placering. */
+	font-size: 22px; /* Anger textstorlek. */
+	margin-top: 20px; /* Anger övre marginal. */
+	margin-right: 120px; /* Anger högermarginal. */
+	text-decoration: none; /* Tar bort understrykning från länkar. */
+	color: #eae2b7; /* Anger textfärg. */
+	text-align: center; /* Centrerar texten horisontellt. */
 }
 
-/* Stilmall för .dropDownHobby- och .dropDownGalleri-elementen */
-.dropDownHobby,
+/* Stilar för dropdown-hobby */
+.dropDownHobby {
+	left: 39vw; /* Placerar elementet från vänster med 39% av fönsterbredden. */
+	width: 6%; /* Anger bredd. */
+	display: none; /* Döljer elementet som standard. */
+	position: absolute; /* Positionerar elementet absolut. */
+	background-color: #f77f00; /* Anger bakgrundsfärg. */
+	border-radius: 0px 0px 7px 7px; /* Anger rundade hörn. */
+}
+
+/* Stilar för dropdown-galleri */
 .dropDownGalleri {
-	left: 39vw; /* Vänsterposition sätts till 39% av fönstrets bredd */
-	display: none; /* Gömmer elementet som standard */
-	position: absolute; /* Positioneras absolut inom sitt överordnade element */
-	background-color: #f77f00; /* Bakgrundsfärg sätts till orange */
-	border-radius: 0px 0px 7px 7px; /* Avrundade hörn */
+	left: 74vw; /* Placerar elementet från vänster med 74% av fönsterbredden. */
+	display: none; /* Döljer elementet som standard. */
+	width: 8.2%; /* Anger bredd. */
+	position: absolute; /* Positionerar elementet absolut. */
+	background-color: #f77f00; /* Anger bakgrundsfärg. */
+	border-radius: 0px 0px 7px 7px; /* Anger rundade hörn. */
 }
 
-/* Visa .dropDownHobby när dess förälderelement (nav ul li) hovras */
+/* Visa dropdown-hobby när listelementet i navigationsmenyn är över */
 nav ul li:hover .dropDownHobby {
-	display: block; /* Visa elementet när överordnat element hovras */
+	display: block; /* Visar elementet när listelementet hovras över. */
 }
 
-/* Visa .dropDownGalleri när dess förälderelement (nav ul li) hovras */
+/* Visa dropdown-galleri när listelementet i navigationsmenyn är över */
 nav ul li:hover .dropDownGalleri {
-	display: block; /* Visa elementet när överordnat element hovras */
+	display: block; /* Visar elementet när listelementet hovras över. */
 }
 
-/* Stilmall för undermenylänkar (.dropDownHobby a och .dropDownGalleri a) */
+/* Stilar för listelement i dropdown-menyn */
+nav ul li ul li {
+	margin-left: 20px; /* Anger vänstermarginal. */
+}
+
+/* Stilar för länkar i dropdown-menyn */
 .dropDownHobby a {
-	width: 80px; /* Ange bredden för länkarna */
+	width: 80px; /* Anger bredd. */
 }
 
 .dropDownGalleri a {
-	width: 110px; /* Ange bredden för länkarna */
+	width: 110px; /* Anger bredd. */
 }
 
-/* Justera första undermenylänkens översta marginal */
-nav ul li ul li:nth-child(1) {
-	margin-top: 6px;
+/* Anpassa utseendet på första listelementet i dropdown-menyn */
+nav ul li ul li :nth-child(1) {
+	margin-top: 6px; /* Anger övre marginal. */
 }
 
-/* Stilmall för undermenylänkar när de hovras */
+/* Stilar för länkar i dropdown-menyn när de hovras över */
 nav ul li ul li a:hover {
-	background-color: #fcbf49; /* Bakgrundsfärg ändras när länken hovras */
+	background-color: #fcbf49; /* Ändrar bakgrundsfärg vid hover. */
 }
 
-/* Justera sista undermenylänkens nedersta marginal */
+/* Anpassa utseendet på sista listelementet i dropdown-menyn */
 nav ul li ul li:nth-last-of-type(1) {
-	margin-bottom: 6px;
+	margin-bottom: 6px; /* Anger nedre marginal. */
 }
 
-/* Stilmall för main-elementet */
+/* Stilar för main */
 main {
-	grid-area: main; /* Placerar main i det angivna området i .wrapper */
-	display: grid; /* Använder CSS Grid för layout */
-	grid-template-columns: 2fr 1fr; /* Definierar kolumner för layouten */
-	grid-template-rows: auto; /* Definierar rader för layouten */
-	padding-left: 5%; /* Vänstermarginal sätts till 5% */
-	padding-right: 5%; /* Högermarginal sätts till 5% */
+	grid-area: main; /* Placerar elementet i grid-området "main". */
+	display: grid; /* Använder CSS Grid för layout av innehållet i main. */
+	grid-template-columns: 2fr 1fr; /* Delar upp kolumner i grid. */
+	grid-template-rows: auto; /* Anpassar rader automatiskt. */
+	padding-left: 5%; /* Anger vänstermarginal. */
+	padding-right: 5%; /* Anger högermarginal. */
 }
 
-/* Stilmall för footer-elementet */
+/* Stilar för footer */
 footer {
-	padding-left: 5%; /* Vänstermarginal sätts till 5% */
-	padding-right: 5%; /* Högermarginal sätts till 5% */
-	grid-area: footer; /* Placerar footer i det angivna området i .wrapper */
-	color: white; /* Textfärg sätts till vit */
-	background-color: #264653; /* Bakgrundsfärg sätts till mörkblå */
+	padding-left: 5%; /* Anger vänstermarginal. */
+	padding-right: 5%; /* Anger högermarginal. */
+	grid-area: footer; /* Placerar elementet i grid-området "footer". */
+	color: white; /* Anger textfärg. */
+	background-color: #264653; /* Anger bakgrundsfärg. */
 }
 
-/* Stilmall för body-elementet */
+/* Stilar för body (hela sidans utseende) */
 body {
-	color: white; /* Textfärg sätts till vit */
-	background-color: #003049; /* Bakgrundsfärg sätts till mörkblå */
-	margin: 0; /* Tar bort yttre marginaler */
-	height: 100vh; /* Höjden sätts till 100% av fönsterhöjden */
+	color: white; /* Anger textfärg. */
+	background-color: #003049; /* Anger bakgrundsfärg. */
+	margin: 0; /* Tar bort yttre marginaler från body. */
+	height: 100vh; /* Sätter höjden till 100% av vyhöjden. */
 }
 
-/* Stilmall för tabeller (table, th, td) */
+/* Stilar för tabell */
 table {
-	width: 100%; /* Bredden sätts till 100% av det överordnade elementet */
-	border-collapse: collapse; /* Tabellramar kollapsas för att ta bort mellanrum */
+	width: 100%; /* Sätter bredden till 100%. */
+	border-collapse: collapse; /* Tar bort gräns mellan tabellceller. */
 }
 
+/* Stilar för tabellceller (th och td) */
 table,
 th,
 td {
-	border: 1px solid black; /* 1px svart kantlinje runt tabell, rubrik och celler */
+	border: 1px solid black; /* Anger gränser runt cellerna. */
 }
 
 th,
 td {
-	padding: 8px; /* Inre utfyllnad på rubrik och celler */
-	text-align: left; /* Texten vänsterjusteras */
+	padding: 8px; /* Anger inre marginaler. */
+	text-align: left; /* Vänsterjusterar text i celler. */
 }
 
+/* Stilar för tabellrubrik (th) */
 th {
-	background-color: #f77f00; /* Bakgrundsfärg för tabellrubrik */
+	background-color: #f77f00; /* Anger bakgrundsfärg för tabellrubriker. */
 }
 
-/* Stilmall för jämna rader i tabellen */
+/* Stilar för jämna rader i tabell, undantaget första raden */
 tr:nth-child(even):not(:first-child) {
-	color: white; /* Textfärg för jämna rader sätts till vit */
-	background-color: #fcbf49; /* Bakgrundsfärg för jämna rader sätts till orange */
+	color: white; /* Anger textfärg för jämna rader. */
+	background-color: #fcbf49; /* Anger bakgrundsfärg för jämna rader. */
 }
 
-/* Stilmall för ojämna rader i tabellen */
+/* Stilar för ojämna rader i tabell, undantaget första raden */
 tr:nth-child(odd):not(:first-child) {
-	color: white; /* Textfärg för ojämna rader sätts till vit */
-	background-color: #264653; /* Bakgrundsfärg för ojämna rader sätts till mörkblå */
+	color: white; /* Anger textfärg för ojämna rader. */
+	background-color: #264653; /* Anger bakgrundsfärg för ojämna rader. */
 }
 
-/* Stilmall för andra sektionen i main-elementet */
+/* Anpassa utseendet på andra sektionen i main */
 main section:nth-child(2) {
-	margin-left: 3vw; /* Vänstermarginal sätts till 3% av fönstrets bredd */
-	margin-top: 3vw; /* Översta marginal sätts till 3% av fönstrets bredd */
+	margin-left: 3vw; /* Anger vänstermarginal. */
+	margin-top: 3vw; /* Anger övre marginal. */
 }
