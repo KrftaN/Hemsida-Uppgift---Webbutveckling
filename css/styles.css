@@ -8,7 +8,7 @@
 	grid-template-areas: "header" "main" "footer"; /* Definierar områden i grid. */
 }
 
-/* Stilar för header */
+/* Stilar för sidhuvdet */
 header {
 	grid-area: header; /* Placerar elementet i grid-området "header". */
 	display: grid; /* Använder CSS Grid för innehållet i header. */
@@ -17,7 +17,7 @@ header {
 	grid-template-rows: 2fr; /* Delar upp rader i grid. */
 }
 
-/* Stilar för länkar i header */
+/* Stilar för länkar i sidhuvudet */
 header > a {
 	text-decoration: none; /* Tar bort understrykning från länkar. */
 	color: #eae2b7; /* Anger textfärg. */
@@ -58,7 +58,7 @@ nav ul li a {
 
 /* Stilar för dropdown-hobby */
 .dropDownHobby {
-	left: 39vw; /* Placerar elementet från vänster med 39% av fönsterbredden. */
+	left: 38vw; /* Placerar elementet från vänster med 38% av fönsterbredden. */
 	width: 6%; /* Anger bredd. */
 	display: none; /* Döljer elementet som standard. */
 	position: absolute; /* Positionerar elementet absolut. */
@@ -68,9 +68,9 @@ nav ul li a {
 
 /* Stilar för dropdown-galleri */
 .dropDownGalleri {
-	left: 74vw; /* Placerar elementet från vänster med 74% av fönsterbredden. */
+	left: 73vw; /* Placerar elementet från vänster med 74% av fönsterbredden. */
 	display: none; /* Döljer elementet som standard. */
-	width: 8.2%; /* Anger bredd. */
+	width: 8%; /* Anger bredd. */
 	position: absolute; /* Positionerar elementet absolut. */
 	background-color: #f77f00; /* Anger bakgrundsfärg. */
 	border-radius: 0px 0px 7px 7px; /* Anger rundade hörn. */
@@ -84,11 +84,6 @@ nav ul li:hover .dropDownHobby {
 /* Visa dropdown-galleri när listelementet i navigationsmenyn är över */
 nav ul li:hover .dropDownGalleri {
 	display: block; /* Visar elementet när listelementet hovras över. */
-}
-
-/* Stilar för listelement i dropdown-menyn */
-nav ul li ul li {
-	margin-left: 20px; /* Anger vänstermarginal. */
 }
 
 /* Stilar för länkar i dropdown-menyn */
@@ -125,7 +120,7 @@ main {
 	padding-right: 5%; /* Anger högermarginal. */
 }
 
-/* Stilar för footer */
+/* Stilar för sidfoten */
 footer {
 	padding-left: 5%; /* Anger vänstermarginal. */
 	padding-right: 5%; /* Anger högermarginal. */
