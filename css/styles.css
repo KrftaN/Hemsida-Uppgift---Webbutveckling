@@ -58,8 +58,8 @@ nav ul li a {
 
 /* Stilar för dropdown-hobby */
 .dropDownHobby {
-	left: 38vw; /* Placerar elementet från vänster med 38% av fönsterbredden. */
-	width: 6%; /* Anger bredd. */
+	left: 35vw; /* Placerar elementet från vänster med 38% av fönsterbredden. */
+	width: 8%; /* Anger bredd. */
 	display: none; /* Döljer elementet som standard. */
 	position: absolute; /* Positionerar elementet absolut. */
 	background-color: #f77f00; /* Anger bakgrundsfärg. */
@@ -68,9 +68,9 @@ nav ul li a {
 
 /* Stilar för dropdown-galleri */
 .dropDownGalleri {
-	left: 73vw; /* Placerar elementet från vänster med 74% av fönsterbredden. */
+	left: 70vw; /* Placerar elementet från vänster med 74% av fönsterbredden. */
 	display: none; /* Döljer elementet som standard. */
-	width: 8%; /* Anger bredd. */
+	width: 10%; /* Anger bredd. */
 	position: absolute; /* Positionerar elementet absolut. */
 	background-color: #f77f00; /* Anger bakgrundsfärg. */
 	border-radius: 0px 0px 7px 7px; /* Anger rundade hörn. */
